@@ -1,0 +1,17 @@
+version: "2.4"
+
+services:
+  hopbits-agent:
+    build: .
+    image: hopbits/agent:local
+    container_name: hopbits-agent
+    restart: always
+    network_mode: host
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      - HOPBITS_NETWORK_MODE=host
+    volumes:
+      - /data/hopbits/data:/var/lib/hopbits
