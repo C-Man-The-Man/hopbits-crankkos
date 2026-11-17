@@ -79,7 +79,7 @@ Press `Ctrl+C` to exit the log viewer without stopping the container.
 
 ### Uninstall
 
-Run each command individually in the working directory `/data/hopbits`:
+From the working directory `/data/hopbits`:
 
 ```bash
 docker-compose down -v
