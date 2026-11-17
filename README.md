@@ -62,13 +62,36 @@ chown -R 65532:65532 /data/hopbits/data && chmod 700 /data/hopbits/data
 docker-compose build
 ```
 
-6. Check the logs and pair the agent with your account using the provided code:
+6. Run the Hopbits container
+
+```bash
+docker-compose up -d
+```
+
+7. Check the logs and pair the agent with your account using the provided code:
 
 ```bash
 docker-compose logs -f
 ```
 
 Press `Ctrl+C` to exit the log viewer without stopping the container.
+
+
+### Uninstall
+
+Run each command individually in the working directory `/data/hopbits`:
+
+```bash
+docker-compose down -v
+```
+
+```bash
+cd
+```
+
+```bash
+rm -rf /data/hopbits
+```
 
 ---
 
